@@ -1,0 +1,31 @@
+#include <iostream> 
+#include <deque> 
+#include <map> 
+using namespace std; 
+int main() { 
+    // DEQUE demonstration 
+    deque<int> d;
+    d.push_back(10); 
+    d.push_front(5); 
+    d.push_back(15); 
+    cout << "Deque elements: "; 
+    for (int x : d) cout << x << " "; 
+    cout << endl; 
+    d.pop_front(); 
+    cout << "After deleting front element: "; 
+    for (int x : d) cout << x << " "; 
+    cout << endl; 
+    // MAP demonstration 
+    map<int, string> m; 
+    m[1] = "C++"; 
+    m[2] = "Python"; 
+    m[3] = "Java"; 
+    cout << "\nMap elements:" << endl; 
+    for (auto it = m.begin(); it != m.end(); ++it) 
+        cout << it->first << " => " << it->second << endl; 
+    m.erase(2); 
+    cout << "After deleting key 2:" << endl; 
+    for (auto it = m.begin(); it != m.end(); ++it) 
+        cout << it->first << " => " << it->second << endl; 
+    return 0; 
+}
